@@ -31,3 +31,65 @@
   text-decoration: underline;
   background-color: #161616;
 }
+
+.main {
+  display: flex;
+}
+
+.movie-filter {
+  flex-basis: 25%;
+  color: #fff;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+  font-size: 1.15rem;
+}
+
+.movie-filter h2 {
+  border-bottom: 3px solid #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
+}
+
+.movie-filter h3 {
+  margin: 2rem 0 0 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.check-filter {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  color: #dcdcdc;
+  margin: .5rem 1rem 0 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
+}
+
+.check-filter :hover {
+  color: #fff;
+}
+.check-filter:hover .checkbox {
+  border-color: #fff;
+}
+
+.checkbox {
+  display: inline-block;
+  position: relative;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #dcdcdc;
+  border-radius: 3px;
+  user-select: none;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
+}
+
+.check-filter-title {
+  padding-left: .45rem;
+  user-select: none;
+  line-height: 1.6rem;
+  vertical-align: top;
+}
