@@ -1,0 +1,33 @@
+.overview {
+  padding: 0 2rem;
+}
+
+.days {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #232323;
+  cursor: pointer;
+  list-style-type: none;
+}
+.day {
+  display: inline;
+  padding: 1rem;
+  user-select: none;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.day:hover {
+  background-color: #2b2b2b;
+}
+
+.active {
+  color: #b50010;
+  text-decoration: underline;
+  background-color: #161616;
+}

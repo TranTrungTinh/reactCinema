@@ -1,0 +1,22 @@
+.title {
+  display: flex;
+  padding: 2rem 0 1rem 2rem;
+  align-items: center;
+}
+
+.title img {
+  width: 90px;
+  height: 90px;
+  display: inline-block;
+}
+
+.title h1 {
+  display: inline-block;
+  font-family: Orbitron,sans-serif;
+  margin: 0;
+  padding: 0 0 0 1rem;
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, .3);
+  user-select: none;
+}
