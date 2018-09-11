@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import MovieFilter from './movie-filter';
-import Movies from './movies';
+import MovieFilter from './MovieFilter/movie-filter';
+import Movies from './MovieList/movies';
 
 export default class Main extends Component {
   render() {

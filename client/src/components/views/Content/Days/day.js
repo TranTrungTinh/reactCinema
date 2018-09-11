@@ -10,6 +10,10 @@ export default class Day extends Component {
           <li className="day">11/09</li>
           <li className="day">12/09</li>
           <li className="day">13/09</li>
+          <li className="day-selector">
+            <span className="dec"></span>
+            <span className="inc"></span>
+          </li>
         </ul>
       </div>
     )

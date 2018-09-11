@@ -2,6 +2,15 @@
   padding: 0 2rem;
 }
 
+.day-selector {
+  display: none;
+}
+.day-selector .dec::after {
+  content: "<"
+}
+.day-selector .inc::after {
+  content: ">"
+}
 .days {
   display: flex;
   flex-direction: row;
@@ -188,4 +197,87 @@
   user-select: none;
   line-height: 1.6rem;
   vertical-align: top;
+}
+
+@media screen and (max-width: 800px) {
+  .days {
+    justify-content: space-between;
+  }
+
+  .days .day {
+    display: none;
+  }
+  .days .active {
+    display: inline;
+  }
+
+  .day-selector {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 80px;
+    color: #fff;
+    user-select: none;
+    font-weight: bold;
+    padding: 0;
+  }
+  .day-selector span {
+    width: 40px;
+    font-size: 3rem;
+    position: relative;
+  }
+  .day-selector span::after {
+    position: absolute;
+    left: 5px;
+    bottom: -6px;
+  }
+  .day-selector span:hover {
+    background-color: lighten(#232323, 3%);
+  }
+
+  .movie-col-left img {
+    height: 150px;
+  }
+
+  .movie-title h2 {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+  }
+
+  .movie-title .movie-rating {
+    font-size: 0.8rem;
+    line-height: 1rem;
+    padding: 0.2rem 0.35rem 0.1rem;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  .movie-filter {
+    order: -1;
+    padding-bottom: 2rem;
+    margin-bottom: 0;
+    padding-left: 0;
+    border-bottom: ridge 2px #6e6e6e;
+    font-size: 1rem;
+  }
+
+  .session-time {
+    padding: 0.35rem;
+    font-size: 0.8rem;
+  }
+
+  .filter-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .check-filter {
+    width: 150px;
+  }
+
+  .tooltip-show {
+    width: 9rem;
+    transform: translate(-50%, 45px);
+  }
 }

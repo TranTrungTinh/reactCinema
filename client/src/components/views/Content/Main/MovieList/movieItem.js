@@ -1,4 +1,5 @@
 import React from 'react'
+import SessionTime from './session-time';
 
 export default () => {
   return (
@@ -16,14 +17,8 @@ export default () => {
           <span className="movie-rating">PG-13</span>
         </div>
         <div className="movie-sessions">
-          <div className="session-time-wrapper tooltip-wrapper">
-            <div className="session-time">3:15 PM</div>
-            <span className="tooltip tooltip-show">Seats able: 180</span>
-          </div>
-          <div className="session-time-wrapper tooltip-wrapper">
-            <div className="session-time">5:15 PM</div>
-            <span className="tooltip">Seats able: 250</span>
-          </div>
+          <SessionTime />
+          <SessionTime />
         </div>
       </div>
     </div>
