@@ -1,0 +1,30 @@
+.facebook {
+  width: 100%;
+  height: 50px;  
+  border-radius: 4px;
+  background-color: #4267b2;
+  color: #fff;
+  border: 0px transparent;  
+  text-align: center;
+  margin: 20px 0 10px 0;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.facebook:hover {
+  color: #fff;
+  background-color: #34518d;
+  border-color: #263c68;
+}
+
+.facebook i {
+  font-size: 1.7rem;
+  padding-right: 15px;
+}

@@ -1,5 +1,6 @@
 .title {
   display: flex;
+  position: relative;
   padding: 2rem 0 1rem 2rem;
   align-items: center;
 }
@@ -21,6 +22,28 @@
   user-select: none;
 }
 
+.title-login {
+  position: absolute;
+  top: 4rem;
+  right: 2rem;
+}
+
+.title-login button {
+  width: 100px;
+  height: 40px;
+  background-color: transparent;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.title-login button:hover {
+  background-color: #fff;
+  color: #6e6e6e;
+}
+
 @media screen and (max-width: 800px) {
   .title img {
     width: 50px;
@@ -29,5 +52,21 @@
 
   .title h1 {
     font-size: 1.5rem;
+  }
+
+  .title-login {
+    top: 2.2rem;
+    right: 2rem;
+  }
+
+  .title-login button {
+    width: 100px;
+    height: 35px;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
   }
 }
