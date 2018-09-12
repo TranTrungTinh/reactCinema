@@ -25,14 +25,14 @@
 
 .modal-divider::after {
   content: "OR";
-    display: inline-block;
-    padding: 0 10px;
-    position: absolute;
-    -webkit-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
-    background-color: #fff;
-    color: #849493;
-    font-size: 1rem;
+  display: inline-block;
+  padding: 0 10px;
+  position: absolute;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  background-color: #fff;
+  color: #849493;
+  font-size: 1rem;
 }
 
 .modal-form {
