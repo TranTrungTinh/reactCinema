@@ -1,13 +1,27 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actionCreators from '../../../../../redux/actions';
+
 import MovieItem from './movieItem';
 
-export default class Movies extends Component {
+class Movies extends Component {
+
+  componentDidMount() {
+    this.props.fetchMovieAction();
+  }
+
   render() {
     return (
       <div className="movie-list">
-        <MovieItem />
-        <MovieItem />
+        {this.props.movies.map(e => <MovieItem key={e._id} {...e}/>)}
       </div>
     )
   }
 }
+
+const mapStateToProps = state => ({
+  movies: state.movies
+});
+
+
+export default connect(mapStateToProps, actionCreators)(Movies);

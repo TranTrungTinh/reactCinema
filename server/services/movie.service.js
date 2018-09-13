@@ -2,7 +2,7 @@ const { Movie } = require('../models/movie.model');
 
 class MovieService {
   static getMovies() {
-    return Movie.find().sort({ Year: -1 });
+    return Movie.find({}, 'Title Poster Rated').sort({ Year: -1 });
   }
 }
 
