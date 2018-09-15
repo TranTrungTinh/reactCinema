@@ -20,7 +20,7 @@ export default class Title extends Component {
   render() {
     return (
       <div className="title" >
-        <img src="./logo.png" alt="this is logo" />
+        <img src="./images/logo.png" alt="this is logo" />
         <h1>React.js Cinema</h1>
         <div className="title-login">
           <button onClick={this.onOpenModal}>LOG IN</button>

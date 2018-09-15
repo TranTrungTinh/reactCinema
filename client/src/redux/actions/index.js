@@ -1,8 +1,11 @@
-import { FETCH_MOVIES, FETCH_SUCCESS, FETCH_FAIL } from './actionTypes';
+import { 
+  FETCH_MOVIES, FETCH_SUCCESS, FETCH_FAIL
+ } from './actionTypes';
 
 export const fetchMovieAction = () => {
   return { type: FETCH_MOVIES }
 }
+
 
 // Action sent by redux saga
 

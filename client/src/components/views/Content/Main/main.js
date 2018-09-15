@@ -1,15 +1,28 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actionCreators from '../../../../redux/actions';
 
 import MovieFilter from './MovieFilter/movie-filter';
 import Movies from './MovieList/movies';
+import Loading from '../../Loading/loading';
 
-export default class Main extends Component {
+class Main extends Component {
+
+  componentDidMount() {
+    this.props.fetchMovieAction()
+  }
+
   render() {
+    const { movies } = this.props;
     return (
       <div className="main">
-        <Movies />
+        {this.props.isLoading ? <Loading /> : <Movies movies={movies} />}
         <MovieFilter />
       </div>
     )
   }
 }
+
+const mapStateToProps = state => ({...state.movieReducer});
+
+export default connect(mapStateToProps, actionCreators)(Main);

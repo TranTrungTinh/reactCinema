@@ -1,8 +1,17 @@
 import { FETCH_SUCCESS, FETCH_FAIL } from '../actions/actionTypes';
 
-const movieReducer = (state = [], action) => {
-  if(action.type === FETCH_SUCCESS) return action.movies
-  if(action.type === FETCH_FAIL) return [];
+const initState = {
+  movies: [],
+  isLoading: true
+}
+
+const movieReducer = (state = initState, action) => {
+
+  if(action.type === FETCH_SUCCESS) { 
+    return { movies: action.movies, isLoading: false }
+  };
+
+  if(action.type === FETCH_FAIL) return initState;
   return state;
 }
 
