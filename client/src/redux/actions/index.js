@@ -1,9 +1,13 @@
 import { 
-  FETCH_MOVIES, FETCH_SUCCESS, FETCH_FAIL
+  FETCH_MOVIES, FETCH_SUCCESS, FETCH_FAIL, FETCH_DETAIL_MOVIE
  } from './actionTypes';
 
 export const fetchMovieAction = () => {
   return { type: FETCH_MOVIES }
+}
+
+export const fetchDetailMovieAction = (imdbID) => {
+  return { type: FETCH_DETAIL_MOVIE, imdbID }
 }
 
 

@@ -1,9 +1,12 @@
 import { all, fork } from 'redux-saga/effects';
 
-import { watchFetchMovies } from './movieSaga';
+import { watchFetchMovies, watchFetchMovieByImdbID } from './movieSaga';
+
+const mySaga = [
+  watchFetchMovies,
+  watchFetchMovieByImdbID
+];
 
 export default function* rootSaga() {
-  yield all([
-    fork(watchFetchMovies)
-  ]);
+  yield all(mySaga.map(saga => fork(saga)));
 }

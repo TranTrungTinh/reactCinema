@@ -2,7 +2,13 @@ const { Movie } = require('../models/movie.model');
 
 class MovieService {
   static getMovies() {
-    return Movie.find({}, 'Title Poster Rated').sort({ Year: -1 });
+    return Movie.find({}, 'Title Poster Rated imdbID').sort({ Year: -1 });
+  }
+
+  static async getMovieByImdbId(id) {
+    const movie = await Movie.findOne({ imdbID: id });
+    if(!movie) throw new Error('CANNOT_FIND_MOVIE');
+    return movie;
   }
 }
 

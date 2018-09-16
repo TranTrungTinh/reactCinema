@@ -1,0 +1,36 @@
+.details {
+  padding: 1rem 2rem 2rem;
+}
+
+.movie-details {
+  color: #fff;
+}
+
+.movie-details table tr td:first-child {
+  font-weight: 600;
+  padding-right: .5rem;
+}
+
+.movie-genre {
+  font-weight: 600;
+}
+
+.movie-plot {
+  font-weight: 300;
+}
+
+.home {
+  padding: .5rem 0;
+  margin-bottom: .5rem;
+}
+
+.home a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.25rem;
+  padding: .5rem 0;
+}
+
+.home a:hover {
+  color: orangered;
+}
