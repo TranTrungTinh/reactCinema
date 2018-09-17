@@ -19,6 +19,13 @@
   font-weight: 300;
 }
 
+.movie-imdbRating {
+  border-radius: 3px;
+  padding: .1rem .2rem;
+  color: black;
+  background-color: #E3B71E;
+}
+
 .home {
   padding: .5rem 0;
   margin-bottom: .5rem;

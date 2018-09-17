@@ -13,7 +13,7 @@ export default (props) => {
       <div className="movie-col-right">
         <div className="movie-title">
           <Link to={`/movie/${props.imdbID}`}>
-            <h2>{props.Title}</h2>
+            <h2>{props.Title} ({props.Year})</h2>
           </Link>
           <span className="movie-rating">{props.Rated}</span>
         </div>

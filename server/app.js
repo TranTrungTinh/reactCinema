@@ -1,16 +1,15 @@
 const express = require('express');
-const parser = require('body-parser');
-const cors = require('cors');
 
+const { setGlobalMiddleware } = require('./middleware/global-middleware');
 const { movieRouter } = require('./routes/movie.route');
+const { authRouter } = require('./routes/auth.route');
 
 const app = express();
-app.use(cors());
-app.use(parser.urlencoded({ extended: true }));
-app.use(parser.json());
+setGlobalMiddleware(app);
 
 app.get('/', (req, res) => res.send({success: true, message: 'App Work'}));
 
-app.use('/', movieRouter);
+app.use('/api/movies', movieRouter);
+app.use('/api/auth', authRouter);
 
 module.exports = { app };

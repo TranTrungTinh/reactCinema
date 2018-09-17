@@ -24,7 +24,7 @@ class Detail extends Component {
           <div className="movie-col-right">
             <div className="movie-title">
               <Link to={`/movie/${movie.imdbID}`}>
-                <h2>{movie.Title}</h2>
+                <h2>{movie.Title} ({movie.Year})</h2>
               </Link>
               <span className="movie-rating">{movie.Rated}</span>
             </div>
@@ -48,6 +48,13 @@ class Detail extends Component {
                   <tr>
                     <td>Cast:</td>
                     <td>{movie.Actors}</td>
+                  </tr>
+                  <tr>
+                    <td>IMDB Point:</td>
+                    <td>
+                      <span className="movie-imdbRating">{movie.imdbRating}</span>
+                      <span>  ({movie.imdbVotes} votes)</span>
+                    </td>
                   </tr>
                 </tbody>
               </table>

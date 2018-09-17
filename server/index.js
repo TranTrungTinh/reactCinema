@@ -1,5 +1,5 @@
 const { app } = require('./app');
-const {PORT} = require('./config/config');
+const { devConfig } = require('./config/env/development');
 
 require('./helpers/connectDB');
-app.listen(PORT, () => console.log("Server started port " + PORT));
+app.listen(devConfig.PORT, () => console.log("Server started port " + devConfig.PORT));

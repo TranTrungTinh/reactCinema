@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
+const { devConfig } = require('../config/env/development');
 
 function getDatabaseUri() {
-  const dbLocal = 'mongodb://localhost:27017/react-cinema';
-  return dbLocal;
+  return devConfig.database.local;
 }
 
 mongoose.connect(getDatabaseUri(), {useNewUrlParser: true})
