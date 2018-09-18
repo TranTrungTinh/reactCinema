@@ -13,6 +13,13 @@ const UserSchema = new Schema({
     image: String,
     token: String,
   },
+  facebook: {
+    id: String,
+    email: String,
+    displayName: String,
+    image: String,
+    token: String,
+  },
   twitter: {
     id: String,
     username: String,

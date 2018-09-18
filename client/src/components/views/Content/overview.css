@@ -35,7 +35,7 @@
   background-color: #2b2b2b;
 }
 
-.active {
+.day-select .active {
   color: #b50010;
   text-decoration: underline;
   background-color: #161616;
@@ -180,6 +180,22 @@
   border-color: #fff;
 }
 
+.filter-group .active {
+  color: #fff;
+}
+
+.filter-group .active .checkbox::after {
+  content: "";
+  border-color: #fff;
+  background-color: #ffa624;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: 3.2px;
+  top: 3.1px;
+  border-radius: 2px;
+}
+
 .checkbox {
   display: inline-block;
   position: relative;
@@ -191,6 +207,7 @@
   user-select: none;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
 }
+
 
 .check-filter-title {
   padding-left: .45rem;

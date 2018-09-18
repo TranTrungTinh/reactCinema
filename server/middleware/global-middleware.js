@@ -5,6 +5,7 @@ const cors = require('cors');
 
 const { devConfig } = require('../config/env/development');
 const { configureGoogleStrategy } = require('./passport-google');
+const { configureFacebookStrategy } = require('./passport-facebook');
 const { User } = require('../models/user.model');
 
 const setGlobalMiddleware = app => {
@@ -22,6 +23,7 @@ const setGlobalMiddleware = app => {
   app.use(passport.session());
 
   configureGoogleStrategy();
+  configureFacebookStrategy();
 
   passport.serializeUser((user, done) => {
     done(null, user._id);

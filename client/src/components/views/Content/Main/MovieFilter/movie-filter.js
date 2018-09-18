@@ -12,13 +12,14 @@ export default class MovieFilter extends Component {
         <FilterGroup title="After 6px" />
         
         <h3>By genre</h3>
+        <FilterGroup title="Action" />
         <FilterGroup title="Animation" />
         <FilterGroup title="Comedy" />
         <FilterGroup title="Crime" />
         <FilterGroup title="Documentary" />
         <FilterGroup title="Drama" />
         <FilterGroup title="Fantacy" />
-        <FilterGroup title="Honor" />
+        <FilterGroup title="Horror" />
         
       </div>
     )
