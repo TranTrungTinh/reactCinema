@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import * as moment from 'moment';
+import * as actionCreators from '../../../../redux/actions';
 
-export default class Day extends Component {
+class Day extends Component {
 
   state = {
-    days: [0, 1, 2, 3, 4, 5, 6].map(num => moment().add(num, 'days')),
-    selected: moment()
+    days: [0, 1, 2, 3, 4, 5, 6].map(num => moment().add(num, 'days'))
   }
 
   formatDay = (day) => {
@@ -14,11 +15,11 @@ export default class Day extends Component {
   }
 
   isActive = (day) => {
-    return day.isSame(this.state.selected, 'day');
+    return day.isSame(this.props.selected, 'day');
   }
 
   onSelected = (daySelected) => {
-    this.setState({ selected: daySelected });
+    this.props.selectedDayAction(daySelected);
   }
 
   render() {
@@ -42,3 +43,7 @@ export default class Day extends Component {
     )
   }
 }
+const mapStateToProps = state => ({
+  ...state.selectedDayReducer
+})
+export default connect(mapStateToProps, actionCreators)(Day);

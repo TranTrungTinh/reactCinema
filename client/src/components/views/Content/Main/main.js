@@ -9,7 +9,7 @@ import Loading from '../../Loading/loading';
 class Main extends Component {
 
   componentDidMount() {
-    this.props.fetchMovieAction()
+    this.props.fetchMovieAction();
   }
 
   moviePassedGenreFilter = (movie) => {

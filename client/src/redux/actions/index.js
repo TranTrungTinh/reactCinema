@@ -1,6 +1,6 @@
 import { 
   FETCH_MOVIES, FETCH_SUCCESS, FETCH_FAIL, 
-  FETCH_DETAIL_MOVIE, FILTERED_MOVIES
+  FETCH_DETAIL_MOVIE, FILTERED_MOVIES, SELECTED_DAY
  } from './actionTypes';
 
 export const fetchMovieAction = () => {
@@ -13,6 +13,10 @@ export const fetchDetailMovieAction = (imdbID) => {
 
 export const filteredMoviesAction = (genre) => {
   return { type: FILTERED_MOVIES, genre }
+}
+
+export const selectedDayAction = (day) => {
+  return { type: SELECTED_DAY, day }
 }
 
 // Action sent by redux saga

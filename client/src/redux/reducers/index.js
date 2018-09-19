@@ -3,11 +3,13 @@ import { combineReducers } from 'redux';
 import movieReducer from './movieReducer';
 import movieDetailReducer from './movieDetailReducer';
 import filteredMovieReducer from './filteredMovieReducer';
+import selectedDayReducer from './selectedDayReducer';
 
 const allReducer = combineReducers({
   movieReducer,
+  selectedDayReducer,
   movie: movieDetailReducer,
-  filteredMovie: filteredMovieReducer
+  filteredMovie: filteredMovieReducer,
 });
 
 export default allReducer; 

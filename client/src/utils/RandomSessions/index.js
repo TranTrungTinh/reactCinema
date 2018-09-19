@@ -1,4 +1,4 @@
-const moment = require('moment');
+import * as moment from 'moment';
 
 function getRandom(x, y) {
   return Math.floor(Math.random() * (y - x + 1)) + x;
@@ -24,7 +24,7 @@ function getRandomTime() {
   for(let index = 0; index < 15; index++) {
     const i = getRandom(0, 3);
     const hour = start.add(times[i], "minute").format("H:mm A");
-    if(getHour(current) <= getHour(hour)) {
+    if(getHour(current) <= getHour(hour) && getHour(hour) >= 9) {
       const item = {
         time: hour,
         seats: getRandom(10, 100)
@@ -35,14 +35,14 @@ function getRandomTime() {
   return output;
 }
 
-const a = {
-  Mon: getRandomTime(),
-  Tue: getRandomTime(),
-  Wed: getRandomTime(),
-  Thu: getRandomTime(),
-  Fri: getRandomTime(),
-  Sat: getRandomTime(),
-  Sun: getRandomTime(),
+export function getRandomTimeAtDay() {
+  return {
+    Mon: getRandomTime(),
+    Tue: getRandomTime(),
+    Wed: getRandomTime(),
+    Thu: getRandomTime(),
+    Fri: getRandomTime(),
+    Sat: getRandomTime(),
+    Sun: getRandomTime()
+  }
 }
-
-console.log(a);

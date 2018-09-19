@@ -1,6 +1,7 @@
 const devConfig = {
   PORT: 3001,
   secret: 'Acasdz434dasTewloRwi',
+  clientURL: 'http://localhost:3000',
   database: {
     local: 'mongodb://localhost:27017/react-cinema'
   },

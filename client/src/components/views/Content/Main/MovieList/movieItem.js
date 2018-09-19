@@ -18,7 +18,7 @@ export default (props) => {
           <span className="movie-rating">{props.Rated}</span>
         </div>
         <div className="movie-sessions">
-          <SessionTime />
+          {props.sessions[props.day].map((e,i) => <SessionTime key={i} {...e}/>)}
         </div>
       </div>
     </div>
